@@ -18,3 +18,4 @@ messages = [
 for message in messages:
     print("Adding message: " + message)
     queue_client.send_message(message)
+        
