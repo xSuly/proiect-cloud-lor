@@ -14,7 +14,7 @@ Scopul proiectului este acela de a incarca pe pagina .html un fisier video .mp4,
   De asemenea, se introduce email-ul persoanei astfel incat aceasta sa fie notificata via mail in legatura cu faptul ca imaginea thumbnail a fost generata.
 
   Astfel, aplicatia foloseste serviciile Email si Storage Blob. Pe Storage Blob se incarca fisierul video de unde aplicatia urmeaza sa il descarce iar tot pe Blob se va incarca imaginea.
-
+:-
   De asemenea, serviciile Queue si CosmosDB sunt active, in momentul in care un thumbnail este creat, in queue, apare un mesaj specific iar email-ul persoanei este salvat in CosmosDB.
 
 
