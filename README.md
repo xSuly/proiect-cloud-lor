@@ -20,25 +20,25 @@ Pentru a realiza acest proiect, urmatoarele au fost necesare:
 - odata creata masina, conectarea se face prin cadrul wsl/PuTTy, folosind cheia SSH <.pem> ce a fost generata automat
 - cheia .pem primeste acces 'chmod 400 key.pem'
 - conectare (doar dupa ce se da acces!) -> ssh -i <key.pem> nume_user@public_ip
-- dupa conectare se instaleaza librariile:
--sudo apt-get update
--sudo apt-get install python3
--sudo apt-get install nginx -y
--sudo apt-get install python3-pip
--sudo apt-get install cron -y  + sudo crontab -e (pentru Script-ul de rulare cand se face tranzitia de la VM la Scale Set)
--sudo waagent -deprovision+user
--pip install requests
--pip install Flask - aplicatia pe care ruleaza server-ul
--pip install moviepy - thumbnail
--python3-m venv venv
--source venv/bin/activate
--pip install azure-storage-queue - pentru Azure
--pip install  azure-communication-email
--pip install  azure-communication-email
--pip install azure-storage-blob 
--pip install azure-identity
--sudo apt install ffmpeg - pentru generare thumbnail
--sudo apt install imagemagick
+- dupa conectare se instaleaza librariile
+- sudo apt-get update
+- sudo apt-get install python3
+- sudo apt-get install nginx -y
+- sudo apt-get install python3-pip
+- sudo apt-get install cron -y  + sudo crontab -e (pentru Script-ul de rulare cand se face tranzitia de la VM la Scale Set)
+- sudo waagent -deprovision+user
+- pip install requests
+- pip install Flask - aplicatia pe care ruleaza server-ul
+- pip install moviepy - thumbnail
+- python3-m venv venv
+- source venv/bin/activate
+- pip install azure-storage-queue - pentru Azure
+- pip install  azure-communication-email
+- pip install  azure-communication-email
+- pip install azure-storage-blob 
+- pip install azure-identity
+- sudo apt install ffmpeg - pentru generare thumbnail
+- sudo apt install imagemagick
 
 - dupa instalarea tuturor componentelor, se foloseste "sudo su -" pentru a accesa modul de root
 - urmeaza crearea folderului in care o sa avem aplicatia, din "cd ~/" folosim "mkdir nume_proiect"
