@@ -5,7 +5,7 @@ client = EmailClient.from_connection_string(connection_string);
 content = EmailContent(
         subject="Felicitari! Ati incarcat un videoclip!",
         plain_text="Videoclip succes!",
-        html= "<html><h1>Radu Stefan Codreanul va va asista daca nu reusiti sa accesati thumbnail-ul liviu.albei@s.unibuc.ro/cojocaru.andrei.3@s.unibuc.ro/radu.codreanu@s.unibuc.ro!</h1></html>",
+        html= "<html><h1>Contactați-ne dacă apar întrebări la adresele: liviu.albei@s.unibuc.ro/cojocaru.andrei.3@s.unibuc.ro/radu.codreanu@s.unibuc.ro!</h1></html>",
 )
 
 with open('/var/www/uploads/emailurile_kober.txt', 'r') as citirea:
