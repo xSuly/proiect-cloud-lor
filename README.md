@@ -20,7 +20,7 @@ Pentru a realiza acest proiect, urmatoarele au fost necesare:
 - odata creata masina, conectarea se face prin cadrul wsl/PuTTy, folosind cheia SSH <.pem> ce a fost generata automat
 - cheia .pem primeste acces 'chmod 400 key.pem'
 - conectare (doar dupa ce se da acces!) -> ssh -i <key.pem> nume_user@public_ip
-- dupa conectare se instaleaza librariile
+- dupa conectare se instaleaza librariile:
 --sudo apt-get update
 --sudo apt-get install python3
 --sudo apt-get install nginx -y
