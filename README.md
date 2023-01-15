@@ -21,8 +21,8 @@ Pentru a realiza acest proiect, urmatoarele au fost necesare:
 - cheia .pem primeste acces 'chmod 400 key.pem'
 - conectare (doar dupa ce se da acces!) -> ssh -i <key.pem> nume_user@public_ip
 - dupa conectare se instaleaza librariile
--- sudo apt-get update
-* sudo apt-get install python3
+- sudo apt-get update
+- sudo apt-get install python3
 - sudo apt-get install nginx -y
 - sudo apt-get install python3-pip
 - sudo apt-get install cron -y  + sudo crontab -e (pentru Script-ul de rulare cand se face tranzitia de la VM la Scale Set)
