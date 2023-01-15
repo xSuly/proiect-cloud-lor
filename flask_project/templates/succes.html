@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: #fff;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      h1,
+      h2 {
+        font-weight: 300;
+        line-height: 1.2;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      /* Navbar */
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333;
+        color: #fff;
+        opacity: 0.8;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        top: 0px;
+        padding: 0 30px;
+        transition: 0.5s;
+      }
+
+      .navbar a {
+        color: #fff;
+        padding: 10px 20px;
+        margin: 0px 5px;
+      }
+
+      .navbar a:hover {
+        border-bottom: #28a745 2px solid;
+      }
+
+      .navbar ul {
+        display: flex;
+      }
+
+      .navbar .logo {
+        font-weight: 400;
+      }
+
+      .navbar.top {
+        background: transparent;
+      }
+
+      /* Header */
+
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1584646098378-0874589d76b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
+            no-repeat center center/cover;
+        height: 100vh;
+        color: #fff;
+      }
+
+      .hero .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        padding: 20px;
+      }
+
+      .hero .content h1 {
+        font-size: 55px;
+      }
+
+      .hero .content p {
+        font-size: 23px;
+        max-width: 600px;
+        margin: 20px 0 30px;
+      }
+
+      .icons {
+        padding: 30px;
+      }
+
+      .icons h3 {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .icons i {
+        background-color: #28a745;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+
+      .email {
+        width: 200px;
+      }
+
+      .succes {
+        background-color: #28a745;
+        border-radius: 20px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      /* Footer */
+
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 150px;
+      }
+
+      .footer a {
+        color: #fff;
+      }
+
+      .footer a:hover {
+        color: #28a745;
+      }
+
+      .footer .social > * {
+        margin-right: 30px;
+      }
+
+      /* Mobile */
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          height: 120px;
+          padding: 20px;
+        }
+
+        .navbar a {
+          padding: 10px 10px;
+          margin: 3px;
+        }
+
+        .flex-items {
+          flex-direction: column;
+        }
+      }
+      /* Text Colors */
+
+      .text-primary {
+        color: #28a745;
+      }
+
+      .text-secondary {
+        color: #0284d0;
+      }
+
+      /* Button */
+
+      .btn {
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 30px;
+        margin-bottom: 20px;
+        color: #fff;
+        background-color: #28a745;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+
+      .btn-primary,
+      .bg-primary {
+        background-color: #28a745;
+        color: #fff;
+      }
+
+      .btn-secondary,
+      .bg-secondary {
+        background-color: #0284d0;
+        color: #fff;
+      }
+
+      .btn-dark,
+      .bg-dark {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .btn-light,
+      .bg-light {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 1px solid #fff;
+      }
+
+      /* Flex Items */
+
+      .flex-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 50px 0 50px;
+        text-align: center;
+        height: 100%;
+      }
+
+      .flex-items > div {
+        padding: 20px;
+      }
+
+      /* Section Header */
+
+      .section-header {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .section-header h2 {
+        font-size: 40px;
+        margin: 20px 0;
+      }
+
+      .section-padding {
+        padding: 20px 20px 40px;
+      }
+    </style>
+    <title>Thumbnail App - Proiect CloudComputing</title>
+  </head>
+  <body id="home">
+    <header class="hero">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary"
+            ><i class="fas fa-book-open"></i> Proiect</span
+          >CloudComputing
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="#">Liviu</a></li>
+            <li><a href="#">Andrei</a></li>
+            <li><a href="#">Radu</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1 class="succes">File has been uploaded successfully!</h1>
+        <h2 class="succes">
+          YOU ROCK! <i class="fa-solid fa-hands-clapping"></i>
+        </h2>
+        <h2 class="succes">{{ string_to_show }}</h2>
+        <a href="#" class="btn"
+          ><i class="fas fa-chevron-right"></i> In cazul unei erori, va rugam sa
+          redenumiti fisierul !</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- About:Icons -->
+      <section id="about" class="icons bg-light">
+        <div class="flex-items">
+          <div>
+            <i class="fas fa-university fa-2x"></i>
+            <div>
+              <h3>Albei Liviu-Andrei</h3>
+              <p>Anul 3, Grupa 361, CTI</p>
+            </div>
+          </div>
+          <div>
+            <i class="fas fa-book-reader fa-2x"></i>
+            <div>
+              <h3>Cojocaru Andrei-Laurențiu</h3>
+              <p>Anul 3, Grupa 361, CTI</p>
+            </div>
+          </div>
+          <div>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+            <div>
+              <h3>Codreanu Radu-Ștefan</h3>
+              <p>Anul 3, Grupa 361, CTI</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a target="_blank" href="https://github.com/xSuly/proiect-cloud-lor"
+          ><i class="fab fa-github fa-2x"></i
+        ></a>
+      </div>
+      <p>Copyright &copy; 2023 - Thumbnail App - Proiect CloudComputing</p>
+      <p>Made by Radu Stefan Codreanu</p>
+    </footer>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
