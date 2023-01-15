@@ -3,7 +3,7 @@ from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 import subprocess
 from PIL import Image
 
-connection_string = "DefaultEndpointsProtocol=https;AccountName=storagelorctivideo;AccountKey=pdRnraSCZZ99egTVjciVus8RIUUwVxbTxFcYTEE7O0GIDExU+sHS+S7OW1u5gpcJppXR2m7AXGja+AStgX4I5A==;EndpointSuffix=core.windows.net"
+connection_string = ""
 
 blob_service_client = BlobServiceClient.from_connection_string(connection_string)
 
@@ -52,7 +52,7 @@ def upload():
         #im = Image.open("/var/www/uploads/data/outputs/thumbnails/5.jpg")
         #cale = '/var/www/uploads/data/outputs/thumbnails/5.jpg'
         #nume_container = 'thumbnail1.jpg'
-        ###blob_service = BlockBlobService(connection_string='DefaultEndpointsProtocol=https;AccountName=storagelorctivideo;AccountKey=pdRnraSCZZ99egTVjciVus8RIUUwVxbTxFcYTEE7O0GIDExU+sHS+S7OW1u5gpcJppXR2m7AXGja+AStgX4I5A==;EndpointSuff>        ###blob_service.create_blob_from_path(container_name, nume_container, cale)
+        ###blob_service = BlockBlobService(connection_string=''>        ###blob_service.create_blob_from_path(container_name, nume_container, cale)
         #with open(file.filename, "rb") as data:
                 #blob_client.upload_blob(data)
         with open('/var/www/uploads/fisier_nume.txt', 'r') as f:
